@@ -1,46 +1,45 @@
-import type { GetStaticProps, InferGetStaticPropsType } from 'next';
-import Head from 'next/head';
-import fs from 'fs';
-import path from 'path';
-import matter from 'gray-matter';
-import { FrontMatter, IndexType } from '../utils/utils';
+import { NextPage } from "next";
+import Head from "next/head";
+import Link from "next/link";
+import { styled } from "stitches.config";
 
-const Home = ({ posts }: InferGetStaticPropsType<typeof getStaticProps>) => {
+const Main = styled("main", {
+  display: "flex",
+  flexDirection: "column",
+  justifyContent: "center",
+  alignItems: "center",
+  padding: "20px 0",
+});
+
+const Des = styled("div", {});
+
+const Ul = styled("ul", {});
+
+const Li = styled("li", {
+  "&::marker": {
+    color: "lime",
+  },
+});
+
+const Home: NextPage = () => {
   return (
     <div>
       <Head>
-        <title>My Log</title>
-        <meta name="Description" content="MyLog" />
+        <title>Hackney</title>
+        <meta name="Description" content="Hackney's Devlog" />
       </Head>
-      <ul>
-        {posts.map((post) => (
-          <li key={post.slug}>{post.frontMatter.title}</li>
-        ))}
-      </ul>
+      <Main>
+        <Des>Hi, I'm Haesoo.</Des>
+        <Des>What I'm interested in these days...🧐</Des>
+        <Ul>
+          <Li>Next JS</Li>
+          <Li>
+            <Link href={"/threejs"}>Three.js</Link>
+          </Li>
+        </Ul>
+      </Main>
     </div>
   );
 };
 
 export default Home;
-
-export const getStaticProps: GetStaticProps<IndexType> = async () => {
-  const files = fs.readdirSync(path.join('posts'));
-  const posts = files.map((filename) => {
-    const markdownWithMeta = fs.readFileSync(
-      path.join('posts', filename),
-      'utf-8'
-    );
-    const { data } = matter(markdownWithMeta);
-    const frontMatter = data as FrontMatter;
-    return {
-      frontMatter,
-      slug: filename.split('.')[0],
-    };
-  });
-
-  return {
-    props: {
-      posts,
-    },
-  };
-};
