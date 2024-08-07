@@ -79,6 +79,14 @@
   @apply italic text-blue-500;
 }
 
+.mdx-content ul {
+  @apply list-disc text-base list-inside font-normal text-gray-700;
+
+  li {
+    @apply text-base;
+  }
+}
+
 /* Add styles for other tags as needed */
 .mdx-content a {
   @apply text-blue-500 underline;
