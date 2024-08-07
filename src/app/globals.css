@@ -58,3 +58,28 @@
     --chart-5: 340 75% 55%;
   }
 }
+
+.mdx-content {
+  @apply text-2xl font-bold;
+}
+
+.mdx-content h2 {
+  @apply text-2xl font-bold;
+}
+
+.mdx-content h3 {
+  @apply text-xl font-bold;
+}
+
+.mdx-content p {
+  @apply text-base font-normal text-gray-700;
+}
+
+.mdx-content em {
+  @apply italic text-blue-500;
+}
+
+/* Add styles for other tags as needed */
+.mdx-content a {
+  @apply text-blue-500 underline;
+}

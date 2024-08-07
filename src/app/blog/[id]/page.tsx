@@ -38,7 +38,9 @@ export default async function BlogDetail({
       </div>
       <div className="pt-7" />
       <ThinDivider />
-      <MDXRemote source={issue.body || ""} />
+      <div className="mdx-content">
+        <MDXRemote source={issue.body || ""} />
+      </div>
     </main>
   );
 }

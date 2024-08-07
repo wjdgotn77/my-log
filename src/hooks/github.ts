@@ -5,9 +5,10 @@ export const fetchIssueList = async (): Promise<Issues> => {
     `https://api.github.com/repos/${config.github.owner}/${config.github.repo}/issues`,
     {
       headers: { Authorization: `Bearer ${config.github.accessToken}` },
-      next: {
-        tags: ["issues"],
-      },
+      cache: "no-cache",
+      // next: {
+      // tags: ["issues"],
+      // },
     }
   ).then((value) => value.json())) as Issues;
 
@@ -29,6 +30,7 @@ export const fetchIssue = async (issueNumber: string): Promise<Issue> => {
     `https://api.github.com/repos/${config.github.owner}/${config.github.repo}/issues/${issueNumber}`,
     {
       headers: { Authorization: `Bearer ${config.github.accessToken}` },
+      cache: "no-cache",
       // next: {
       //   tags: [`issue-${issueNumber}`],
       // },
