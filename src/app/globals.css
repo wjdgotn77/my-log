@@ -59,55 +59,72 @@
   }
 }
 
-.mdx-content {
-  @apply whitespace-pre-wrap;
-}
-
-.mdx-content h2 {
-  @apply text-2xl font-bold;
-}
-
-.mdx-content h3 {
-  @apply text-xl font-bold;
-}
-
-.mdx-content p {
-  @apply text-base font-normal text-gray-700;
-}
-
-.mdx-content em {
-  @apply italic text-blue-500;
-}
-
-.mdx-content ul {
-  @apply list-disc text-base list-inside font-normal text-gray-700;
-
-  li {
-    @apply text-base;
+@layer components {
+  .mdx-content {
+    @apply whitespace-pre-wrap;
   }
-}
 
-.mdx-content ol {
-  @apply list-decimal text-base list-inside font-normal text-gray-700;
-
-  li {
-    @apply text-base;
+  .mdx-content h2 {
+    @apply text-2xl font-bold;
   }
-}
 
-.mdx-content code {
-  @apply text-sm font-mono bg-gray-100 text-gray-700 p-1 rounded-lg;
-}
+  .mdx-content h3 {
+    @apply text-xl font-bold;
+  }
 
-.mdx-content pre {
-  @apply text-base font-mono bg-gray-800 text-gray-100 p-4 rounded-lg w-full overflow-x-auto;
-}
+  .mdx-content p {
+    @apply text-base font-normal text-gray-700;
+  }
 
-.mdx-content pre code {
-  @apply text-sm font-normal bg-gray-800 text-gray-100;
-}
+  .mdx-content em {
+    @apply italic text-blue-500;
+  }
 
-/* Add styles for other tags as needed */
-.mdx-content a {
-  @apply text-blue-500 underline;
+  .mdx-content ul {
+    @apply list-disc text-base list-inside font-normal text-gray-700 leading-none ml-5 indent-[-1.25rem];
+  }
+
+  .mdx-content ul li {
+    @apply text-base leading-none;
+  }
+
+  .mdx-content ul ul {
+    @apply list-inside list-square leading-none ml-6 indent-[-1.5rem] text-sm text-gray-700;
+  }
+
+  .mdx-content ul ul li {
+    @apply leading-none;
+  }
+
+  .mdx-content ol {
+    @apply list-decimal text-base list-inside font-normal text-gray-700 leading-none;
+  }
+
+  .mdx-content ol li {
+    @apply leading-none;
+  }
+
+  .mdx-content ol ol {
+    @apply list-inside list-decimal leading-none ml-6 indent-[-1.5rem] text-sm text-gray-700;
+  }
+
+  .mdx-content ol ol li {
+    @apply leading-none;
+  }
+
+  .mdx-content code {
+    @apply text-sm font-mono bg-gray-100 text-gray-700 p-1 rounded-lg;
+  }
+
+  .mdx-content pre {
+    @apply text-base font-mono bg-gray-800 text-gray-100 p-4 rounded-lg w-full overflow-x-auto;
+  }
+
+  .mdx-content pre code {
+    @apply text-sm font-normal bg-gray-800 text-gray-100;
+  }
+
+  .mdx-content a {
+    @apply text-blue-500 underline;
+  }
 }
