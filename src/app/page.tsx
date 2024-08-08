@@ -38,7 +38,7 @@ export default async function Home() {
   };
 
   return (
-    <main className=" max-w-lg m-auto">
+    <main className="max-w-screen-lg m-auto px-5">
       <div className="flex items-center gap-3 py-5">
         <Image
           className="rounded-full"

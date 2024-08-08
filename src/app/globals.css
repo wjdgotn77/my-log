@@ -60,7 +60,7 @@
 }
 
 .mdx-content {
-  @apply text-2xl font-bold;
+  @apply whitespace-pre-wrap;
 }
 
 .mdx-content h2 {
@@ -95,12 +95,16 @@
   }
 }
 
+.mdx-content code {
+  @apply text-sm font-mono bg-gray-100 text-gray-700 p-1 rounded-lg;
+}
+
 .mdx-content pre {
   @apply text-base font-mono bg-gray-800 text-gray-100 p-4 rounded-lg w-full overflow-x-auto;
+}
 
-  code {
-    @apply text-sm font-normal font-mono text-gray-100 p-1 rounded-lg;
-  }
+.mdx-content pre code {
+  @apply text-sm font-normal bg-gray-800 text-gray-100;
 }
 
 /* Add styles for other tags as needed */
