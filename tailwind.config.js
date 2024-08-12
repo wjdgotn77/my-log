@@ -18,6 +18,7 @@ module.exports = {
       roman: "upper-roman",
     },
   },
+  safelist: [{ pattern: /text-[0-9xl]/ }],
   plugins: [],
   mode: "jit",
 };

@@ -1,6 +1,9 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { Inter } from "next/font/google";
 import "./globals.css";
+import { ThinDivider, Title } from "@/components/common";
+import { Menu } from "@/components/common/menu";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -14,9 +17,49 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const renderLinks = () => {
+    const links = [
+      {
+        href: "https://github.com/wjdgotn77",
+        label: "Github",
+        target: "_blank",
+      },
+      {
+        href: "https://www.linkedin.com/in/haesoo-j-3b0ba4216/",
+        label: "LinkedIn",
+        target: "_blank",
+      },
+      {
+        href: "https://www.instagram.com/haesoojip/",
+        label: "Instagram",
+        target: "_blank",
+      },
+    ];
+
+    return links.map((link, index) => (
+      <li key={index}>
+        <Link href={link.href} target={link.target}>
+          {link.label}
+        </Link>
+      </li>
+    ));
+  };
+
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+        <div className="max-w-screen-md m-auto px-5">
+          <div className="w-full flex items-center gap-3 py-5">
+            <div className="w-full flex justify-between">
+              <Title fontSize="2xl" fontWeight="bold">{`Haesoo's Blog`}</Title>
+              <ul className="flex gap-3 font-thin">{renderLinks()}</ul>
+            </div>
+          </div>
+          <Menu />
+          <ThinDivider />
+        </div>
+        {children}
+      </body>
     </html>
   );
 }
