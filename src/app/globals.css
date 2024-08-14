@@ -127,4 +127,35 @@
   .mdx-content a {
     @apply text-blue-500 underline;
   }
+
+  .mdx-content blockquote {
+    position: relative;
+    border: 1px solid #e1e1e1;
+    border-radius: 10px;
+    padding: 20px;
+  }
+
+  .mdx-content blockquote:before {
+    position: absolute;
+    content: "\201C";
+    font-size: 20px;
+    color: #e1e1e1;
+    top: 10px;
+    left: 10px;
+  }
+  .mdx-content blockquote:after {
+    position: absolute;
+    content: "\201C";
+    font-size: 20px;
+    color: #e1e1e1;
+    right: 10px;
+    bottom: 10px;
+  }
+  .mdx-content blockquote cite {
+    display: block;
+    font-size: 0.8rem;
+    text-align: right;
+    color: #e1e1e1;
+    padding-right: 20px;
+  }
 }
