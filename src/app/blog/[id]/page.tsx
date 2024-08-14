@@ -13,7 +13,7 @@ export default async function BlogDetail({
   const issue = await fetchIssue(params.id);
 
   return (
-    <main className="max-w-screen-md m-auto px-5 py-5">
+    <main className="max-w-screen-md h-fit m-auto px-5 py-5">
       <h1 className="text-4xl font-bold">{issue.title}</h1>
       <div className="flex gap-3 pt-5">
         <Link href={issue.user?.html_url || ""} target="_blank">
