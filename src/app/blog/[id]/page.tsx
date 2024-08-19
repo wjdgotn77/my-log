@@ -35,7 +35,7 @@ export default async function BlogDetail({
           return (
             <span
               key={label.id}
-              className={`rounded-xl px-2 py-2`}
+              className={`min-w-20 rounded-2xl px-2 py-1 text-center text-gray-700`}
               style={{ backgroundColor: `#${label.color}` }}
             >
               {label.name}

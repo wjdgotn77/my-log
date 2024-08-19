@@ -1,7 +1,10 @@
 import Link from "next/link";
+import { Inconsolata } from "next/font/google";
 
 import { ThinDivider, Title } from "@/components/common";
 import { Menu } from "@/components/common/menu";
+
+const inconsolata = Inconsolata({ subsets: ["latin"], weight: ["200", "400"] });
 
 export const Gnb = () => {
   const renderLinks = () => {
@@ -37,7 +40,9 @@ export const Gnb = () => {
       <div className="w-full flex items-center gap-3 py-5">
         <div className="w-full flex justify-between">
           <Title fontSize="2xl" fontWeight="bold">{`Haesoo's Blog`}</Title>
-          <ul className="flex gap-3 font-thin">{renderLinks()}</ul>
+          <ul className={`${inconsolata.className} flex gap-3 font-thin`}>
+            {renderLinks()}
+          </ul>
         </div>
       </div>
       <Menu />

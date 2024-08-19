@@ -69,11 +69,11 @@ export default async function AboutPage() {
       <ThinDivider />
       <section className="w-full pt-8 pb-6">
         <h2 className="text-xl font-bold pb-3">Education</h2>
-        <p className="">
+        <p>
           동국대학교 문화예술대학원 예술치료학과 미술치료전공{" "}
           <span className="font-thin">(2017.03 - 2020.07)</span>
         </p>
-        <p className="">
+        <p>
           경기대학교 서양화학과{" "}
           <span className="font-thin">(2013.03 - 2017.02)</span>
         </p>
@@ -82,11 +82,13 @@ export default async function AboutPage() {
         <h2 className="text-xl font-bold py-3">Work Experience</h2>
         <ul>
           <li>
-            <p className="text-lg">
+            <p>
               (주)모노랩스{" "}
-              <span className="font-thin">2022.05.09 ~ 2024.08.12</span>
+              <span className="font-thin">(2022.05.09 - 2024.08.12)</span>
             </p>
-            <p>맞춤 영양제 정기 구독 서비스 IAM 의 프론트엔드 개발</p>
+            <p className="text-gray-700">
+              - 맞춤 영양제 정기 구독 서비스 IAM 의 프론트엔드 개발
+            </p>
           </li>
         </ul>
       </section>

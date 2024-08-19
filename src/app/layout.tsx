@@ -1,13 +1,16 @@
 import type { Metadata } from "next";
 
-import { Inter } from "next/font/google";
+import { Gothic_A1 } from "next/font/google";
 
 import { Footer } from "@/components/common/footer";
-
-import "./globals.css";
 import { Gnb } from "@/components/common/gnb";
 
-const inter = Inter({ subsets: ["latin"] });
+import "./globals.css";
+
+const gothicA1 = Gothic_A1({
+  subsets: ["latin"],
+  weight: ["200", "300", "400", "700"],
+});
 
 export const metadata: Metadata = {
   title: "haesoo's blog",
@@ -21,7 +24,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body className={gothicA1.className}>
         <Gnb />
         {children}
         <Footer />
