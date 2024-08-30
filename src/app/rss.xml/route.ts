@@ -25,6 +25,7 @@ export async function GET() {
   if (filteredOpenIssues) {
     filteredOpenIssues.map((post: Issue) => {
       feed.item({
+        author: "Haesoo Cheong",
         title: post.title,
         description: post.body || "",
         url: `${domain}${post.number}`,
@@ -32,8 +33,6 @@ export async function GET() {
       });
     });
   }
-
-  console.log(filteredOpenIssues);
 
   return new Response(feed.xml({ indent: true }), {
     headers: {

@@ -20,6 +20,11 @@ export const metadata: Metadata = {
   verification: {
     google: process.env.GOOGLE_SITE_VERIFICATION,
   },
+  alternates: {
+    types: {
+      "application/rss+xml": `${domain}rss.xml`,
+    },
+  },
   openGraph: {
     title: "haesoo's blog",
     description:
