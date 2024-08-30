@@ -13,7 +13,7 @@ const gothicA1 = Gothic_A1({
 });
 
 export const metadata: Metadata = {
-  title: "haesoo's blog",
+  title: "해수의 개발블로그",
   verification: {
     google: process.env.GOOGLE_SITE_VERIFICATION,
   },
