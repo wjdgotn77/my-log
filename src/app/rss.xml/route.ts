@@ -28,7 +28,7 @@ export async function GET() {
         author: "Haesoo Cheong",
         title: post.title,
         description: post.body || "",
-        url: `${domain}${post.number}`,
+        url: `${domain}blog/${post.number}`,
         date: post.created_at,
       });
     });
