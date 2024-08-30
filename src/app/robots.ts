@@ -1,4 +1,5 @@
 import type { MetadataRoute } from "next";
+import { domain } from "@/variables/constants";
 
 export default function robots(): MetadataRoute.Robots {
   return {
@@ -7,6 +8,6 @@ export default function robots(): MetadataRoute.Robots {
       allow: "/",
       //   disallow: '/private/',
     },
-    sitemap: "https://blog-ivory-three.vercel.app/sitemap.xml",
+    sitemap: `${domain}sitemap.xml`,
   };
 }
