@@ -21,9 +21,9 @@ export default async function AboutPage() {
               Frontend Developer Based in Seoul, South Korea
             </p>
           </div>
-          <div className="relative w-[120px] aspect-square">
+          <div className="relative max-[544px]:hidden w-[120px] aspect-square">
             <Image
-              className="rounded-full "
+              className="rounded-full"
               src={issueList[0].user?.avatar_url || ""}
               fill
               alt="avatar"
