@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 
-import { GoogleTagManager } from "@next/third-parties/google";
+import { GoogleTagManager, GoogleAnalytics } from "@next/third-parties/google";
 import { Gothic_A1 } from "next/font/google";
 
 import { domain } from "@/variables/constants";
@@ -42,7 +42,8 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <GoogleTagManager gtmId="GTM-P4F6W86G" />
+      <GoogleTagManager gtmId={process.env.GTM_ID || ""} />
+      <GoogleAnalytics gaId={process.env.GA_ID || ""} />
       <body className={gothicA1.className}>
         <Gnb />
         {children}
