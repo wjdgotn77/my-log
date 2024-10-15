@@ -18,13 +18,13 @@ export const IssueItem = ({ issue }: { issue: Issue }) => {
   return (
     <div className="p-4 mb-4 cursor-pointer" onClick={navigateToIssueDetail}>
       <Title fontWeight="bold">{issue.title}</Title>
-      <p className={`text-gray-500 ${inconsolata.className}`}>
+      {/* <p className={`text-gray-500 ${inconsolata.className}`}>
         {new Date(issue.created_at).toLocaleDateString("en-US", {
           month: "long",
           day: "numeric",
           year: "numeric",
         })}
-      </p>
+      </p> */}
       <div className="flex gap-2 pt-3">
         {issue.labels.map((label) => {
           if (typeof label === "string") {

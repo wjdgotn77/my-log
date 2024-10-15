@@ -19,13 +19,13 @@ export default async function BlogDetail({
         <Link href={issue.user?.html_url || ""} target="_blank">
           @haesoo
         </Link>
-        <p className="font-thin text-gray-500">
+        {/* <p className="font-thin text-gray-500">
           {new Date(issue.created_at).toLocaleDateString("en-US", {
             month: "long",
             day: "numeric",
             year: "numeric",
           })}
-        </p>
+        </p> */}
       </div>
       <div className="flex gap-2 pt-3">
         {issue.labels.map((label) => {
